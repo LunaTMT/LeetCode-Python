@@ -3,10 +3,9 @@ def longestCommonPrefix(strs):
         if len(strs) == 1:
             return strs[0]
         
-
         valid = []
         for i in range(1, len(max(strs, key=len)) + 1):
-
+            
             slices = [item[0 : 0 + i] for item in strs]
 
             if len((set(slices))) != 1:
