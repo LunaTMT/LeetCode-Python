@@ -1,18 +1,17 @@
-  def wordPattern(self, pattern: str, s: str) -> bool:
-      hash_ = {}
-      s = s.split()
+def wordPattern(pattern: str, s: str) -> bool:
+    L2W_hash = {}
+    W2L_hash = {}
 
-      if len(pattern) < len(s) or len(s) < len(pattern): return False
+    p = pattern
+    s = s.split()
 
-      for letter, word in zip(pattern, s):
+    if len(p) != len(s): return False
 
-          if word in hash_.values() and hash_.get(letter, False) != word: 
-              return False #word conflicts
+    for letter, word in zip(p, s):
+        if letter in L2W_hash and L2W_hash[letter] != word: return False
+        elif word in W2L_hash and W2L_hash[word] != letter: return False
+        else: 
+            L2W_hash[letter] = word
+            W2L_hash[word] = letter
+    return True
 
-          elif letter not in hash_: #does the letter have a map
-              hash_[letter] = word
-
-          elif hash_[letter] != word: 
-              return False  #letter conflics
-
-      return True
