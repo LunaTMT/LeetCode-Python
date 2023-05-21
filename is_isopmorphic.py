@@ -1,10 +1,6 @@
 def isIsomorphic(s: str, t: str) -> bool:
-    ST = {}
-    TS = {}
-
-    if len(s) < len(t) or len(t) < len(s):
-        return False
-
+    ST, TS = {}, {}
+    
     for s, t in zip(s, t):
         if (s in ST and ST[s] != t) or  (t in TS and TS[t] != s): return False
         else: 
