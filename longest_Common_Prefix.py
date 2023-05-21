@@ -9,3 +9,7 @@ def longestCommonPrefix(self, strs: list[str]) -> str:
             break
     return pref
     
+""" When sorted lexicographically the first and last string have the most variation in their prefixes. Everything between them will be closer to the first value. 
+Therefore we only need to search the prefix of the first and last element to find the LCM.
+
+The last being our most deviated word from initial will give us the largest possible match (i.e LCM)
