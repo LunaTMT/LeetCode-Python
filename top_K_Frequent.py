@@ -1,4 +1,3 @@
-
 from collections import defaultdict
 import heapq
 from operator import itemgetter
@@ -14,3 +13,7 @@ def topKFrequent(self, nums: list[int], k: int) -> list[int]:
     heap = heapq.nlargest(k, count.items(), key=itemgetter(1)) 
     return [i[0] for i in heap]
         
+    
+    #Code partially from StackOverflow.
+    
+    #What does a heap do and what is it?
