@@ -1,3 +1,7 @@
+
+#DIGUSTING CODE
+
+
 def check_duplicates(lists):
     for list_ in lists:
         count = {i:list_.count(i) for i in set(list_)}
