@@ -1,7 +1,18 @@
+#Better solution
+def isValidSudoku(self, board: List[List[str]]) -> bool:
+
+    pos = []
+    for r, row in enumerate(board):
+        for c, item in enumerate(row):
+            if item != ".":
+                pos += [(r, item), (item, c), (r//3, c//3, item)]
+
+    return len(pos) == len(set(pos))
+
+
+
 
 #DIGUSTING CODE
-
-
 def check_duplicates(lists):
     for list_ in lists:
         count = {i:list_.count(i) for i in set(list_)}
