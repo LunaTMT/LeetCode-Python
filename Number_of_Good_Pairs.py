@@ -8,3 +8,5 @@ class Solution:
                 n -= 1
                 res += n*(n+1) / 2
         return int(res)
+    
+    #sum of first n integers
