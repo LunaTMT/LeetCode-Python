@@ -1,3 +1,14 @@
-class Solution:
-    def isPalindrome(self, x: int) -> bool:
-        return True if str(x) == str(x)[::-1] else False
+def isPalindrome(s: str) -> bool:
+    i, j = 0, len(s) - 1
+    while i < j:
+        a, b = s[i].lower(), s[j].lower()
+        if a.isalnum() and b.isalnum():
+            if a != b: return False
+            else:
+                i, j = i + 1, j - 1
+                continue
+        i, j = i + (not a.isalnum()), j - (not b.isalnum())
+    return True
+
+if __name__ == "__main__": 
+    isPalindrome("A man, a plan, a canal: Panama")
