@@ -1,9 +1,7 @@
 def sortArrayByParity( nums: list[int]) -> list[int]:
     l, r = 0, len(nums)-1
-
-
-    while l < r:
-        
+    
+    while l < r:    
         if nums[l] % 2 == 1:
             if nums[r] % 2 == 1:
                 while r > l:
