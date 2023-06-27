@@ -1,4 +1,4 @@
-#bad solution
+#very slow in comparison to other solutions but seeing as this is a 2 points question
 
 def countBinarySubstrings(s: str) -> int:
 
