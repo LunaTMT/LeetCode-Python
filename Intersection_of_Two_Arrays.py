@@ -1,4 +1,5 @@
 def intersection(nums1: list[int], nums2: list[int]) -> list[int]:
+    #Could easily be done with set and intersection or Counter dict but for sake of developing 2 pointer skills
     nums1.sort()
     nums2.sort()
 
