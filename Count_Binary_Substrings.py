@@ -1,6 +1,6 @@
-def countBinarySubstrings(s: str) -> int:
-    #s = '_' + s + '_'
+#bad solution
 
+def countBinarySubstrings(s: str) -> int:
 
     l = r = 0
     
