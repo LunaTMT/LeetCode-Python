@@ -1,7 +1,4 @@
-
-
 def backspaceCompare(s: str, t: str) -> bool:
-
     s = [*s]
     t = [*t]
 
