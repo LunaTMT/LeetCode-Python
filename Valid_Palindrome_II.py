@@ -5,7 +5,7 @@ def validPalindrome(s: str) -> bool:
                 if deleted:
                     return False
                 else:
-                    return validate(l+1, r, s, True) or validate(l, r+1, s, True)
+                    return validate(l+1, r, s, True) or validate(l, r-1, s, True)
             else:
                 l, r = l+1, r-1
         return True
