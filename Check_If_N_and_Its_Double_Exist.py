@@ -2,7 +2,6 @@ def checkIfExist(arr: list[int]) -> bool:
     arr.sort()
     l = 0
     r = 1
-
     
     for i, left in enumerate(arr):
         for right in arr[i+1:]:
