@@ -1,16 +1,12 @@
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        l = 0
-        r = 1
-        n = len(prices)
-        profit = 0
-        while r < n:
-            current_profit = prices[r] - prices[l]
-            
-            if prices[l] < prices[r]:
-            
-                profit = max(current_profit, profit)
-            else: 
-                l = r
-            r += 1
-        return profit    
+    def countGoodSubstrings(self, s: str) -> int:
+        res = 0
+
+        i = 0
+        while i < len(s)-2:
+            substring = s[i] + s[i+1] + s[i+2]
+            if len(set(substring)) == len(substring):
+                res += 1
+            i += 1
+        return res
+        
