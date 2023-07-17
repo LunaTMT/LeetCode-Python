@@ -1,9 +1,8 @@
 def countConsistentStrings(self, allowed: str, words: List[str]) -> int:
-
     allowed = set(allowed)
     count = 0
     for word in words:
-        for char in set(word):
+        for char in word:
             if char not in allowed:
                 count += 1
                 break
