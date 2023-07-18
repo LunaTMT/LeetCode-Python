@@ -1,3 +1,5 @@
+#https://leetcode.com/problems/rings-and-rods/solutions/3782764/python-simple-solution-with-explanation-beats-95-89/
+
 def countPoints(rings: str) -> int:
     colours = [set() for _ in range(10)]
 
