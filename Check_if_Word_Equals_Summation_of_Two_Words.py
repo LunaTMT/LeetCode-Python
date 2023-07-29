@@ -2,8 +2,7 @@ from itertools import zip_longest
 
 
 def isSumEqual(w1: str, w2: str, w3: str) -> bool:
-    # w1 = (ord(c) - ord('a') for c in w1 if c != a)
-    
+
     res = ["", "", ""]
 
     for i, word in enumerate((w1, w2, w3)):
