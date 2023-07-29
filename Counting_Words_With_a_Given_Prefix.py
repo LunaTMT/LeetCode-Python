@@ -4,3 +4,6 @@ def prefixCount(self, words: List[str], pref: str) -> int:
         if word[:len(pref)] == pref:
             count += 1
     return count
+
+    #or
+    return sum(word.startswith(pref) for word in words)
