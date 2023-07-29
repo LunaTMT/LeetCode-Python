@@ -17,4 +17,9 @@ def isSumEqual(w1: str, w2: str, w3: str) -> bool:
 
     res = [int(str_) if str_ else 0 for str_ in res]
 
+    """Or simply use the built in translate method on str
+    table = str.maketrans('abcdefghij', '0123456789')
+    return int(firstWord.translate(table)) + int(secondWord.translate(table)) == int(targetWord.translate(table))
+    """
+
 isSumEqual("aaaadaaa", "a", "aaaa")
