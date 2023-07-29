@@ -7,4 +7,7 @@ def areOccurrencesEqual(s: str) -> bool:
             count[c] += 1
     return len(set(count.values())) == 1
 
+    # or can simply use counter
+    # return len(set(Counter(s).values())) == 1
+
 areOccurrencesEqual("abacbc")
