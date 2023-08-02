@@ -1,0 +1,5 @@
+def divideString(self, s: str, k: int, fill: str) -> List[str]:
+    n = len(s)
+    if n % k:
+        s += (k - (n % k)) * fill
+    return (s[i:i+k] for i in range(0, len(s), k))
