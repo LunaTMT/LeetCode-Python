@@ -33,7 +33,7 @@ def countNegatives(grid: list[list[int]]) -> int:
     """
     O(n^2)
     Iterate through 2d matrix 
-    return sum(1 for row in grid for item in row if item < 0)
     """
+    return sum(1 for row in grid for item in row if item < 0)
 
 countNegatives(grid = [[4,3,2,-1],[3,2,1,-1],[1,1,-1,-2],[-1,-1,-2,-3]])
