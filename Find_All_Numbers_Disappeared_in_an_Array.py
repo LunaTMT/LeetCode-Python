@@ -1,5 +1,4 @@
-def findDisappearedNumbers(self, nums: list[int]) -> list[int]:
-    n = len(nums)
-    range_ = set([i for i in range(1, n+1)])
-    return range_.difference(set(nums))
-     
+def findDisappearedNumbers(self, nums: List[int]) -> List[int]:
+    sequence = set([i for i in range(1, len(nums)+1)])
+    nums = set(nums)
+    return sequence - nums
