@@ -1,0 +1,12 @@
+def isBalanced(self, root):
+    return (self.Height(root) >= 0)
+    
+def Height(self, root):
+    if root is None:  return 0
+    
+    L_height, R_height = self.Height(root.left), self.Height(root.right)
+
+    if L_height < 0 or R_height < 0 or abs(L_height - R_height) > 1:  
+        return -1
+    
+    return max(L_height, R_height) + 1
