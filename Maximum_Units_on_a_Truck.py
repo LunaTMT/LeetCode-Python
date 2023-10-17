@@ -1,5 +1,5 @@
 def maximumUnits(boxes: list[list[int]], truckSize: int) -> int:
-    boxes.sort(lambda x:x[1], reverse=1)
+    boxes.sort(key=lambda x:x[1], reverse=1)
     s = 0
     for i, j in boxes:
         i = min(i, truckSize)
