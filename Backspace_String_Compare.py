@@ -1,23 +1,25 @@
-def backspaceCompare(s: str, t: str) -> bool:
-    s = [*s]
-    t = [*t]
+def backspaceCompare(self, s: str, t: str) -> bool:
+    s_stack = []
+    t_stack = []
+    
+    for i in s:
+        if i == "#":
+            if s_stack: s_stack.pop()
+        else:
+            s_stack.append(i)
+    
+    for j in t:
+        if j == "#":
+            if t_stack:
+                t_stack.pop()
+        else:
+            t_stack.append(j)
 
-    def remove_hash_tag(s):
-        remove = 0
-        r = len(s)-1
-        while remove >= 0:
-            if s[r] == "#":
-                remove += 1
-                s.pop(r)
-            
-            elif remove > 0:
-                remove -= 1
-                s.pop(r)
+    return s_stack == t_stack
 
-            r -= 1  
-        return s
-        
-    return remove_hash_tag(s) == remove_hash_tag(t)
-
-backspaceCompare("a#c", "b")
-            
+    def backspace(acc, e):
+        if e != '#': acc.append(e)
+        elif acc: acc.pop()
+        return acc
+        return reduce(back, S, []) == reduce(back, T, [])
+    return reduce(back, S, []) == reduce(back, T, [])

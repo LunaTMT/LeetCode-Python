@@ -1,8 +1,6 @@
-def containsDuplicate(nums: list[int]) -> bool:
-    seen = set()
-
+def containsDuplicate(self, nums: List[int]) -> bool:
+    dic = defaultdict(int)
     for i in nums:
-        if i not in seen: seen.add(i)
-        else:
-            return True
+        if i in dic: return True
+        dic[i] 
     return False

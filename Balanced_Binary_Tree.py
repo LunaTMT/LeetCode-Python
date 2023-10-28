@@ -1,12 +1,10 @@
-def isBalanced(self, root):
-    return (self.Height(root) >= 0)
+def isBalanced(self, root: Optional[TreeNode]) -> bool:
     
-def Height(self, root):
-    if root is None:  return 0
-    
-    L_height, R_height = self.Height(root.left), self.Height(root.right)
+    def dfs(root):
+        if not root: return [True, 0]
 
-    if L_height < 0 or R_height < 0 or abs(L_height - R_height) > 1:  
-        return -1
-    
-    return max(L_height, R_height) + 1
+        left, right = dfs(root.left), dfs(root.right)
+        balanced = (left[0] and right[0] and abs(left[1] - right[1]) <= 1)
+        return [balanced, 1 + max(left[1], right[1])]
+
+    return dfs(root)[0]
