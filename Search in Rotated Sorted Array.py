@@ -1,4 +1,6 @@
 class Solution:
+    
+    #2 log(n)
     def search(self, nums: List[int], target: int) -> int:
         
         def find_pivot(s, e):
@@ -34,4 +36,30 @@ class Solution:
         else:
             return bs(0, k-1)
 
+
+    #log(n)
+    def search(self, nums: List[int], target: int) -> int:
+        def bs(s, e):
+            if s <= e:
+                m = (s + e) // 2
+                start = nums[s]
+                mid = nums[m]
+                end = nums[e]
+
+                if target == mid:
+                    return m
+
+                if start <= mid:
+                    if start <= target <= mid:
+                        return bs(s, m - 1)
+                    else:
+                        return bs(m + 1, e)
+                else:
+                    if mid < target <= end:
+                        return bs(m + 1, e)
+                    else:
+                        return bs(s, m - 1)
+            return -1
+
+        return bs(0, len(nums) - 1)
         
