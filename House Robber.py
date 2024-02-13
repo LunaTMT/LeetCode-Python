@@ -1,6 +1,4 @@
-from typing import List
-
-def rob(nums: List[int]) -> int:
+def rob(nums: list[int]) -> int:
     curr, prev = 0,0
     for n in nums:
         curr, prev =  max(prev+n, curr), curr
